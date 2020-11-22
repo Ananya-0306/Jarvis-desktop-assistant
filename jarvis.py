@@ -9,6 +9,10 @@ import pyautogui
 import psutil  #pip install psutil
 import pyjokes  # pip install pyjokes
 import requests, json  #inbuilt
+import random
+import threading
+import twilio
+from playsound import playsound
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 190)
@@ -76,7 +80,7 @@ def checktime(tt):
 
 #welcome function
 def wishme():
-    speak("Welcome Back")
+    speak("Hey, Welcome Back")
     hour = datetime.datetime.now().hour
     if (hour >= 6 and hour < 12):
         speak("Good Morning sir!")
@@ -250,7 +254,7 @@ if __name__ == "__main__":
             try:
                 speak("What is the message for the email")
                 content = takeCommand()
-                to = 'reciever@xyz.com'
+                to = 'saurav.bear@gmail.com'
                 sendEmail(to, content)
                 speak("Email has sent")
             except Exception as e:
@@ -369,3 +373,37 @@ if __name__ == "__main__":
               or 'go offline jarvis' in query or 'bye' in query
               or 'nothing' in query):
             wishme_end()
+
+                    # most asked question from google Assistant 
+        elif "will you be my gf" in query or "will you be my bf" in query:    
+            speak("oohho ananya! Are you flirting with me?") 
+            
+        elif 'how are you' in query: 
+            speak("I am fine, Thank you") 
+            speak("How are you, Ananya?") 
+  
+        elif 'fine' in query or "good" in query: 
+            speak("It's good to know that your fine") 
+  
+        elif "i love you" in query: 
+            speak("Ooh my god! I love you too")
+            
+        elif "who i am" in query: 
+            speak("If you talk then definately you are human.") 
+  
+        elif "why you came to world" in query: 
+            speak("Thanks to Ananya. further It's a secret") 
+
+        elif "who made you" in query or "who created you" in query:  
+            speak("I have been created by Ananya.")
+
+        elif 'play music' in query or "play song" in query: 
+            speak("Here you go with music") 
+            # music_dir = "G:\\Song" 
+            music_dir = "C:\\Users\\ananya\\Desktop\\music"
+            songs = os.listdir(music_dir) 
+            print(songs)     
+            random = os.startfile(os.path.join(music_dir, songs[6]))
+            files = os.listdir("C:\\Users\\ananya\\Desktop\\music")
+            d = random.choice(files)
+            os.startfile(d)
