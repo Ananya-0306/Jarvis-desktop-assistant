@@ -1,6 +1,8 @@
-pyttsx3
-psutil
-pyjokes
-twilio
-playsound
+pyttsx3==2.90
+psutil==5.8.0
+pyjokes==0.6.0
+twilio==7.*
+playsound==1.3.*
 SpeechRecognition==3.8.1
+wikipedia==1.4.0
+PyAutoGUI==0.9.53
