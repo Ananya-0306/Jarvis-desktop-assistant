@@ -1,0 +1,5 @@
+pyttsx3
+psutil
+pyjokes
+twilio
+playsound
