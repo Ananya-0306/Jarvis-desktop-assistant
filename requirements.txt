@@ -3,3 +3,4 @@ psutil
 pyjokes
 twilio
 playsound
+SpeechRecognition==3.8.1
