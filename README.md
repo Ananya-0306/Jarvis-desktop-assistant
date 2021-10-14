@@ -1,5 +1,5 @@
 # Jarvis-desktop-assistant
-**To run Desktop assistant on windows, enter the following commands in terminal:**
+**To run Desktop assistant on windows, enter the following commands in terminal:**  
 Note: make sure that python3 is installed
 ```
 git clone https://github.com/Ananya-0306/Jarvis-desktop-assistant.git
