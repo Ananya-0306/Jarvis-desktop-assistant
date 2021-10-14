@@ -14,6 +14,8 @@ import threading
 import twilio
 from playsound import playsound
 
+import gui
+
 engine = pyttsx3.init()
 engine.setProperty('rate', 190)
 voices = engine.getProperty('voices')
@@ -30,6 +32,7 @@ def voice_change(v):
 
 #speak function
 def speak(audio):
+    gui.speak(audio)
     engine.say(audio)
     engine.runAndWait()
 
@@ -202,7 +205,7 @@ def personal():
 
 if __name__ == "__main__":
     wishme()
-    while (True):
+    def run_assistant():
         query = takeCommand().lower()
 
         #time
@@ -407,3 +410,5 @@ if __name__ == "__main__":
             files = os.listdir("C:\\Users\\ananya\\Desktop\\music")
             d = random.choice(files)
             os.startfile(d)
+    gui.set_speak_command(run_assistant)
+    gui.mainloop()
